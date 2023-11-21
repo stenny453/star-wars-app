@@ -23,3 +23,6 @@ pnpm-debug.log*
 *.sw?
 
 tests/unit/__snapshots__
+
+# testing
+coverage
