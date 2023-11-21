@@ -1,17 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div class="main-app">
+      <AppHeader />
+      <ErrorHandler />
+      <InitializeData />
+      <RouterView />
+    </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import AppHeader from './components/AppHeader.vue';
+import ErrorHandler from './components/ErrorHandler/ErrorHandler.vue';
+import InitializeData from './components/Initialize/InitializeData.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
 <style>
@@ -20,7 +22,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.main-app {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 20;
 }
 </style>
