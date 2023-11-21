@@ -1,4 +1,4 @@
-<!-- init fetch movies to avoid multiple fetch on different views  -->
+<!-- fetch movies to avoid multiple fetch on different views  -->
 
 <template>
   <br>

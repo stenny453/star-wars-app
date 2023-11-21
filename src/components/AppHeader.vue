@@ -9,7 +9,9 @@
       <div class="navbar-item">
         <div slot="title">
           <vs-navbar-title>
-            {{ title }}
+            <span class="header-title">
+              {{ title }}
+            </span>
           </vs-navbar-title>
         </div>
 
@@ -36,30 +38,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, toRefs } from 'vue';
 import { RouterLink } from 'vue-router';
-
-const title = ref('Star Wars');
 
 const activeItem = ref(0);
 
 const search = ref('');
 
-/**
- * Paths list
- */
-const paths = ref([
-  {
-    index: 0,
-    link: '/',
-    name: 'Movies',
+// eslint-disable-next-line no-undef
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
   },
-  {
-    index: 1,
-    link: '/classic-movies',
-    name: 'Classics',
+  paths: {
+    type: Array,
+    required: true,
   },
-]);
+});
+
+const { title, paths } = toRefs(props);
 
 </script>
 
@@ -71,6 +69,11 @@ const paths = ref([
     top: 0;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    color: #5b3cc4;
+    font-weight: bold;
   }
 
   .vs-con-items {

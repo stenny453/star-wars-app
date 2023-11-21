@@ -1,3 +1,5 @@
+<!-- Catch all error the requests -->
+
 <template>
   <br>
 </template>

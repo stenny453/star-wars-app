@@ -1,3 +1,5 @@
+<!-- Custom skeleton for movies -->
+
 <template>
   <div>
     <vs-row vs-justify="center">

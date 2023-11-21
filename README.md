@@ -34,6 +34,11 @@ npm run lint --fix
 npm run format
 ```
 
+### run unit tests
+```
+npm run test:unit
+```
+
 ## Application architecture
 
 Our Vue.js 3 application follows a modular and component-based architecture, 
@@ -52,6 +57,9 @@ The primary components of the architecture include:
 3. Components:
 - Components serve as the building blocks of our application, promoting reusability and maintainability.
 - Each component encapsulates specific functionality and may include data fetching, rendering logic user interactions and error handling.
+
+4. Functions
+- Utils functions documented with JSDoc format
 
 ## Key Architectural Choices and Patterns
 
@@ -81,6 +89,9 @@ The primary components of the architecture include:
 - Ensures a seamless user experience across various devices and screen sizes.
 - Add pagination in case we have a large movies
 
+7. Unit Testing
+- Test utils on vue
+
 ### Overall Workflow
 
 1. Data Fetching:
@@ -94,6 +105,6 @@ The primary components of the architecture include:
 - Utilizes Vue.js templating to dynamically render data fetched from the server.
 - Components are structured to ensure a clean separation of concerns for improved maintainability.
 
-## Perpective
+## Perpectives
 - Make the filter search work
 - Make the filter search work

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <div class="main-app">
-      <AppHeader />
+      <AppHeader
+        :title="appTitle"
+        :paths="AppPaths"
+      />
       <ErrorHandler />
       <InitializeData />
       <RouterView />
@@ -13,6 +16,9 @@
 import AppHeader from './components/AppHeader.vue';
 import ErrorHandler from './components/ErrorHandler/ErrorHandler.vue';
 import InitializeData from './components/Initialize/InitializeData.vue';
+import AppPaths from './router/path';
+
+const appTitle = 'Star Wars';
 
 </script>
 

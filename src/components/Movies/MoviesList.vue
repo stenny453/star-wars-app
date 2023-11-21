@@ -35,14 +35,16 @@
 </template>
 
 <script setup>
-import { toRefs, defineProps, ref } from 'vue';
+import { toRefs, ref } from 'vue';
 import MoviesItem from './MoviesItem.vue';
 import MoviesSkeleton from './MoviesSkeleton.vue';
 
 const currentPage = ref(1);
 
+// movies limit to display
 const pageSize = 10;
 
+// eslint-disable-next-line no-undef
 const props = defineProps({
   movies: {
     type: Array,

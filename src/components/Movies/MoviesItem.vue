@@ -37,8 +37,9 @@
 </template>
 
 <script setup>
-import { toRefs, defineProps } from 'vue';
+import { toRefs } from 'vue';
 
+// eslint-disable-next-line no-undef
 const props = defineProps({
   movie: {
     type: Object,
@@ -51,9 +52,17 @@ const { movie } = toRefs(props);
 </script>
 
 <style scope>
+  .main-movies-item {
+    cursor: pointer;
+  }
+
+  .main-movies-item:hover {
+      transform: scale(1.05);
+  }
+
   @media screen and (max-width: 800px) {
-        .main-movies-item {
-          width: 90% !important;
-        }
+    .main-movies-item {
+      width: 90% !important;
+    }
   }
 </style>
