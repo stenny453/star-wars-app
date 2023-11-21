@@ -22,4 +22,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-/test/unit/__snapshots__
+tests/unit/__snapshots__
