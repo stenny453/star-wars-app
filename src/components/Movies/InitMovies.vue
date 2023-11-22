@@ -17,7 +17,6 @@ const storeMovies = useMoviesStore();
  */
 const getFilms = async () => {
   storeMovies.loading = true;
-  storeMovies.loaded = false;
 
   await axiosUtil.get('films').then((response) => {
     storeMovies.count = response?.data?.count;
@@ -27,8 +26,6 @@ const getFilms = async () => {
     storeMovies.error = error;
     storeMovies.loading = false;
   });
-
-  storeMovies.loaded = true;
 };
 
 onMounted(() => {
